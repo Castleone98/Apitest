@@ -13,20 +13,8 @@ class MainActivity : YouTubeBaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    fun dummy(){
 
-}
+    }
 
-private fun initYoutubePlayer(key: String) {
-    val youtubeView = binding.youtubePlayerView
-
-    youtubeView.initialize("develop", object : YouTubePlayer.OnInitializedListener {
-        override fun onInitializationSuccess(p0: YouTubePlayer.Provider, p1: YouTubePlayer, p2: Boolean ) {
-            if (!p2) {
-                p1.cueVideo(key)
-            }
-        }
-
-        override fun onInitializationFailure(p0: YouTubePlayer.Provider?, p1: YouTubeInitializationResult? ) {
-        }
-    })
 }
